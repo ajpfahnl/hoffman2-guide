@@ -6,6 +6,7 @@
   * [Navigating Hoffman2 and Some Tidbits](#navigating-hoffman2-and-some-tidbits)
   * [Copying Files to and from your Local Machine](#copying-files-to-and-from-your-local-machine)
   * [Interactive session](#interactive-session)
+    + [Interactive Session with a GUI - RStudio](#interactive-session-with-a-gui---rstudio)
   * [Running Jobs](#running-jobs)
   * [Running Jobs with Shell Scripts](#running-jobs-with-shell-scripts)
     + [Simple shell script tutorial](#simple-shell-script-tutorial)
@@ -76,8 +77,10 @@ qrsh -l h_rt=4:00:00,h_data=4G,highp -pe shared 4
 # 2 hours, 1GB of memory per core, 12 cores ditributed across multiple compute nodes
 qrsh -l h_data=1G,h_rt=2:00:00 -pe dc\* 12
 ```
-
 NOTE: the more resources you request, the longer it takes for the session to initialize. The same thing goes for submitting jobs.
+
+The following is something _I don't recommend_ because of how slow it is, but for information on interacting with a graphical user interface (GUI), check out my tutorial here:
+### [Interactive Session with a GUI - RStudio](gui.md)
 
 ## Running Jobs
 `qsub` is the command for submitting jobs to the cluster. Options include:
