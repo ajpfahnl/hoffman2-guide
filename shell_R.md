@@ -9,7 +9,7 @@ $ module load R/4.0.2
 $ nano run.R # or any other text editor (e.g. vim, emacs, ...)
 ```
 
-## 2. Add the following lines to `run_R.sh`
+## 2. Add the following lines to `run.R`
 ```shell
 #!/usr/bin/env Rscript
 #$ -N my_R_test
