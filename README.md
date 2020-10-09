@@ -10,7 +10,8 @@
   * [Running Jobs](#running-jobs)
   * [Running Jobs with Shell Scripts](#running-jobs-with-shell-scripts)
     + [Simple shell script tutorial](#simple-shell-script-tutorial)
-    + [Using R](#using-r)
+    + [Using R: two file method](#using-r-two-file-method)
+    + [Using R: one file (might not work)](#using-r-one-file-might-not-work)
   * [Job Tidbits](#job-tidbits)
   * [Going Further with the Documentation](#going-further-with-the-documentation)
 ## Logging In
@@ -110,7 +111,8 @@ qsub -l h_rt=200,h_data=50M \
 ## Running Jobs with Shell Scripts
 The following are tutorials on how to use shell scripts when submitting jobs to the job scheduler.
 ### [Simple shell script tutorial](shell.md)
-### [Using R](shell_R.md)
+### [Using R: two file method](shell_R2.md)
+### [Using R: one file (might not work)](shell_R.md)
 
 ## Job Tidbits
 Some useful commands:

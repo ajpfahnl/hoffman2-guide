@@ -1,9 +1,11 @@
 # `qsub` with Shell Scripts: R
 [Back](README.md)
 
+**_WARNING_**: This method may not work when using `/usr/bin/env` in the shebang (reason unknown). See [this](https://stackoverflow.com/questions/17496810/usr-bin-env-rscript-no-such-file-or-directory-after-recent-r-3-0-1-install) StackOverflow post. I've had issues with this method and have defaulted to the two-file method.
+
 NOTE: The dollar sign is a placeholder for the informative text before the actual command prompt (e.g. `[username@login4 ~]$` is simplified to `$`)
 
-## 1. Setup
+## 1. Setup: Load R
 ```console
 $ module load R/4.0.2
 $ nano run.R # or any other text editor (e.g. vim, emacs, ...)
