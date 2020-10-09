@@ -1,4 +1,4 @@
-# `qsub` with Shell Scripts: R
+# `qsub` with R: Two-file Method
 [Back](README.md)
 
 NOTE: The dollar sign is a placeholder for the informative text before the actual command prompt (e.g. `[username@login4 ~]$` is simplified to `$`)
