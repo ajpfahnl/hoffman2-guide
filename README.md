@@ -54,13 +54,14 @@ scp <username>@hoffman2.idre.ucla.edu:<file-path-on-server> <local-file-path>
 scp <username>@hoffman2.idre.ucla.edu:~/file_in_home.txt .
 
 # copy a folder in the scratch directory to a folder in your local machine's home directory
+SCRATCH=$(ssh <username>@hoffman2.idre.ucla.edu 'echo $SCRATCH')
 scp -r <username>@hoffman2.idre.ucla.edu:$SCRATCH/scratch_folder ~/folder_in_home
 ```
 
 To copy from your computer to the server, just switch the location arguments:
 ```bash
-# copy a folder in your local machine's home directory into a folder in your scratch directory
-scp -r ~/folder_in_home/folder_to_send <username>@hoffman2.idre.ucla.edu:$SCRATCH/scratch_folder
+# copy a folder in your local machine's home directory into a folder in your home directory on Hoffman2
+scp -r ~/folder_in_home/folder_to_send <username>@hoffman2.idre.ucla.edu:~/some_folder
 ```
 
 ## Interactive session
