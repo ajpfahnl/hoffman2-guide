@@ -56,7 +56,7 @@ module purge                # unload all modules from the environment
     - `h_rt=<time>` specifies the amount of time
     - `h_data=<mem>` specifies the amount of memory
     - `highp` specifies that you want to use resources owned by your group (check with `mygroups`). This can make the time for initialization faster.
- * `-pe shared`: specifies the number of CPU cores to allocate. For multiple CPU cores, `h_data` refers to the memory per core, so the total memory requested will be `h_data * pe shared`
+ * `-pe shared <n>`: specifies the number of CPU cores to allocate. For multiple CPU cores, `h_data` refers to the memory per core, so the total memory requested will be `h_data * pe shared`
 ```bash
 # 4 hours, 4GB of memory per core, 4 CPU cores, use owned resources, (total of 16GB memory requested)
 qrsh -l h_rt=4:00:00,h_data=4G,highp -pe shared 4
@@ -75,7 +75,7 @@ NOTE: the more resources you request, the longer it takes for the session to ini
 * `-V`: copies all environmental variables present when submitting the job
 * `-j <y/n>`: merge error log with the normal output of the program (default `n` for no) 
 * `-l`: resources. `h_rt`, `h_data`, `highp`
-* `-pe shared`: CPU cores
+* `-pe shared <n>`: CPU cores
 * `-M $USER@mail`: send notifications via email
 * `-m bea`: notifications sent when: `b` job begins, `e` job ends, `a` job aborts
 * `-b <y/n>`: specify if the executable is a binary (default `n` for no)
