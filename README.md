@@ -16,7 +16,7 @@ man <command>
 ```
 To search the documentation:
 * Type `/` + `phrase`, and then the `ENTER` key
-* Next occurnace: Type `n` and then `ENTER`
+* Next occurance: Type `n` and then `ENTER`
 * Previous occurance: `SHIFT` + `n` and then `ENTER`
 
 ## Logging in
