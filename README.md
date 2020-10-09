@@ -56,6 +56,12 @@ scp <username>@hoffman2.idre.ucla.edu:~/file_in_home.txt .
 scp -r <username>@hoffman2.idre.ucla.edu:$SCRATCH/scratch_folder ~/folder_in_home
 ```
 
+To copy from your computer to the server, just switch the location arguments:
+```bash
+# copy a folder in your local machine's home directory into a folder in your scratch directory
+scp -r ~/folder_in_home/folder_to_send <username>@hoffman2.idre.ucla.edu:$SCRATCH/scratch_folder
+```
+
 ## Interactive session
 `qrsh` is the command to use for creaing a so-called "interactive session". When you request an interactive session, the cluster allocates you the set of resources you specify, and you are presented with a prompt similar to the login node, the difference being that you can run computationally heavy tasks. Without specifying options, `qrsh` defaults to a 2 hour session. Here are some common options:
  * `-l`: resources that you want allocated
