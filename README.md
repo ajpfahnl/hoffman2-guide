@@ -2,7 +2,6 @@
 ## Table of Contents
 - [Hoffman2 Guide](#hoffman2-guide)
   * [Table of Contents](#table-of-contents)
-  * [Getting Started](#getting-started)
   * [Logging In](#logging-in)
   * [Navigating Hoffman2 and Some Tidbits](#navigating-hoffman2-and-some-tidbits)
   * [Copying Files to and from your Local Machine](#copying-files-to-and-from-your-local-machine)
@@ -12,25 +11,7 @@
     + [Simple shell script tutorial](#simple-shell-script-tutorial)
     + [Using R](#using-r)
   * [Job Tidbits](#job-tidbits)
-## Getting Started
-Hoffman2's new documentation can be found [here](https://www.hoffman2.idre.ucla.edu/). Instructions on how to request an account can be found there.
-
-Additional resources:
-* For submitting batch jobs to Univa Grid Engine, look under section 4 of [this](http://www.univa.com/resources/files/univa_user_guide_univa__grid_engine_854.pdf) pdf. Section 4.2.2: _Example 2: An Advanced Batch Job_ is particularly helpful.
-* Hoffman2 documentation page on computing is [here](https://www.hoffman2.idre.ucla.edu/Using-H2/Computing/Computing.html).
-* The (old) IDRE Hoffman2 webpage on commonly-used UGE commands is [here](http://web.archive.org/web/20170226162759/https://www.hoffman2.idre.ucla.edu/computing/sge/).
-* Another (old) page on UGE commands and command files is [here](http://web.archive.org/web/20170517201108/http://www.hoffman2.idre.ucla.edu/computing/running/#Build_a_UGE_command_file_for_your_job_and_use_UGE_commands_directly).
-* Another useful website from the Center for Cognitive Neuroscience is [here](https://www.ccn.ucla.edu/wiki/index.php/Hoffman2).
-
-To find comprehensive documentation for most of the commands mentioned below, use the command:
-```
-man <command>
-```
-To search the documentation:
-* Type `/` + `phrase`, and then the `ENTER` key
-* Next occurance: Type `n` and then `ENTER`
-* Previous occurance: `SHIFT` + `n` and then `ENTER`
-
+  * [Going Further with the Documentation](#going-further-with-the-documentation)
 ## Logging In
 I recommend using `ssh` to log in. The basic syntax is:
 ```bash
@@ -130,3 +111,21 @@ qdel <job-ID>       # removes job from the queue or aborts running job
 qhold <job-ID>      # keeps the job in queue until you call...
 qrls <job-ID>
 ```
+## Going Further with the Documentation
+Hoffman2's new documentation can be found [here](https://www.hoffman2.idre.ucla.edu/). Instructions on how to request an account can be found there.
+
+Additional resources:
+* For submitting batch jobs to Univa Grid Engine, look under section 4 of [this](http://www.univa.com/resources/files/univa_user_guide_univa__grid_engine_854.pdf) pdf. Section 4.2.2: _Example 2: An Advanced Batch Job_ is particularly helpful.
+* Hoffman2 documentation page on computing is [here](https://www.hoffman2.idre.ucla.edu/Using-H2/Computing/Computing.html).
+* The (old) IDRE Hoffman2 webpage on commonly-used UGE commands is [here](http://web.archive.org/web/20170226162759/https://www.hoffman2.idre.ucla.edu/computing/sge/).
+* Another (old) page on UGE commands and command files is [here](http://web.archive.org/web/20170517201108/http://www.hoffman2.idre.ucla.edu/computing/running/#Build_a_UGE_command_file_for_your_job_and_use_UGE_commands_directly).
+* Another useful website from the Center for Cognitive Neuroscience is [here](https://www.ccn.ucla.edu/wiki/index.php/Hoffman2).
+
+To find comprehensive documentation for most of the commands mentioned below, use the command:
+```
+man <command>
+```
+To search the documentation:
+* Type `/` + `phrase`, and then the `ENTER` key
+* Next occurance: Type `n` and then `ENTER`
+* Previous occurance: `SHIFT` + `n` and then `ENTER`
