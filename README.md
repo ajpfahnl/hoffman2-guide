@@ -1,5 +1,17 @@
 # Hoffman2 Guide
-
+## Table of Contents
+- [Hoffman2 Guide](#hoffman2-guide)
+  * [Table of Contents](#table-of-contents)
+  * [Getting Started](#getting-started)
+  * [Logging In](#logging-in)
+  * [Navigating Hoffman2 and Some Tidbits](#navigating-hoffman2-and-some-tidbits)
+  * [Copying Files to and from your Local Machine](#copying-files-to-and-from-your-local-machine)
+  * [Interactive session](#interactive-session)
+  * [Running Jobs](#running-jobs)
+  * [Running Jobs with Shell Scripts](#running-jobs-with-shell-scripts)
+    + [Simple shell script tutorial](#simple-shell-script-tutorial)
+    + [Using R](#using-r)
+  * [Job Tidbits](#job-tidbits)
 ## Getting Started
 Hoffman2's new documentation can be found [here](https://www.hoffman2.idre.ucla.edu/). Instructions on how to request an account can be found there.
 
@@ -19,7 +31,7 @@ To search the documentation:
 * Next occurance: Type `n` and then `ENTER`
 * Previous occurance: `SHIFT` + `n` and then `ENTER`
 
-## Logging in
+## Logging In
 I recommend using `ssh` to log in. The basic syntax is:
 ```bash
 ssh <username>@hoffman2.idre.ucla.edu
@@ -30,6 +42,7 @@ After entering your password, you should find yourself at the login node.
 Use the command `cd` to get to your home directory (only 20 GB of storage here). The scratch directory (stored in the variable `SCRATCH`) gives you 2 TB of storage, but with the caveat that files that haven't been modified in the past couple weeks will be deleted.
 ```bash
 cd              # to get to home
+cd ~            # also to get to home
 cd $SCRATCH     # to get to scratch
 
 echo $SCRATCH   # to print variables (in this case, printing the scratch directory path)
@@ -48,6 +61,18 @@ module avail python         # viewing the available submodules for a module (mos
 module load python/3.7.2    # establish environment for a module
 module unload python/3.7.2  # unload module from the environment
 module purge                # unload all modules from the environment
+```
+
+## Copying Files to and from your Local Machine
+To copy files, I recommend `scp`. The basic format is `scp [-r] <from> <to>`. The `-r` option recursively copies files (a.k.a. copies the whole folder). To copy from the server to your computer:
+```bash
+scp <username>@hoffman2.idre.ucla.edu:<file-path-on-server> <local-file-path>
+
+# copy a file in the home directory on Hoffman2 to your current directory
+scp <username>@hoffman2.idre.ucla.edu:~/file_in_home.txt .
+
+# copy a folder in the scratch directory to a folder in your local machine's home directory
+scp -r <username>@hoffman2.idre.ucla.edu:$SCRATCH/scratch_folder ~/folder_in_home
 ```
 
 ## Interactive session
