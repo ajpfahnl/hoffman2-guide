@@ -25,6 +25,8 @@ write.csv(df, file = "df.csv")
 #$ -N my_R_analysis
 #$ -cwd
 #$ -V
+#$ -j y
+#$ -o logs/$JOB_NAME.$JOB_ID.log
 #$ -l h_data=1G,h_rt=00:10:00
 #$ -pe shared 2
 #$ -M $USER@mail

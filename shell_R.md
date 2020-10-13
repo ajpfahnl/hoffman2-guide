@@ -17,6 +17,8 @@ $ nano run.R # or any other text editor (e.g. vim, emacs, ...)
 #$ -N my_R_test
 #$ -cwd
 #$ -V
+#$ -j y
+#$ -o logs/$JOB_NAME.$JOB_ID.log
 #$ -l h_data=1G,h_rt=00:10:00
 #$ -pe shared 2
 #$ -M $USER@mail
@@ -28,6 +30,8 @@ df <- data.frame("x" = x, "y" = y)
 write.csv(df, file = "df.csv")
 ```
 Exit your text editor once you're finished. The first line is what is known as a shebang. This indicates what program to run the script with when it is run as an executable. The following lines are the options that the job scheduler will parse. This program generates a dataframe and saves it as a `.csv` file.
+
+Any output printed by the program will be saved in a `.log` file in an automatically generated `logs` folder.
 
 NOTE: make sure to have the `-V` option specified. This copies the environment variables for R that was loaded with `module load` into the job's environment.
 
