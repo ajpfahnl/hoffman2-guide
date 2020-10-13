@@ -53,8 +53,10 @@ Your job 4714826 ("my_R_test") has been submitted
 The job will run and you'll receive two emails, one indicated the job started, and one indicating it ended.
 ```console
 $ ls
-df.csv  my_R_test.e4714826  my_R_test.o4714826  my_R_test.pe4714826  my_R_test.po4714826  run.R
-$ less df.csv
+df.csv  logs  run.R
+$ ls logs
+my_R_test.714826.log
+$ cat df.csv
 "","x","y"
 "1",1,1
 "2",2,2
