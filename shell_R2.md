@@ -36,6 +36,8 @@ Rscript analysis.R
 ```
 Exit your text editor once you're finished. The first line of `run.sh` is what is known as a shebang. This indicates what program to run the script with when it is run as an executable. The following lines are the options that the job scheduler will parse. This program runs `Rscript` which interprets the R file and generates a dataframe, saving it to a `.csv` file.
 
+Any output printed by the program will be saved in a `.log` file in an automatically generated `logs` folder.
+
 NOTE: make sure to have the `-V` option specified. This copies the environment variables for R that was loaded with `module load` into the job's environment.
 
 ## 3. Turn `run.sh` into an executable and run

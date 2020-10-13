@@ -12,7 +12,7 @@ $ nano run.R # or any other text editor (e.g. vim, emacs, ...)
 ```
 
 ## 2. Add the following lines to `run.R`
-```shell
+```R
 #!/usr/bin/env Rscript
 #$ -N my_R_test
 #$ -cwd
